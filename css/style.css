@@ -4,49 +4,56 @@
 }
 
 :root {     
-  --color-text-base: #fff;
-  --color-lime-500: #E4FE08;
-  --color-lime-700: #B6CB06;
+  --color-text-base: 113;
+  --color-text-bright: #FFF;
+  --color-purple-500: #53F;
+  --color-purple-700: #319;
+  --color-lime-500: #EF0;
+  --color-lime-700: #BC0;
 }
 
 body {
     margin: 0;		
     padding: 0;
+    color: var(--color-text-base);
+    font: 300 16px/1.25 Poppins, Helvetica, Arial, sans-serif;}
+body#index {
     background-image: url("../assets/background-calm-sea.svg");		
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    font: 400 16px/1.25 Poppins, Helvetica, Arial, sans-serif;		
-    color: var(--color-text-base);		
-}
+    color: var(--color-text-bright);
+    font-weight: 400;}
 
 h1 {
     font-size: 4em;			
-    margin: 0.5em 0;
-}
-
+    margin: 0.5em 0;}
 @media screen and (max-width: 600px) {
     h1 {
-        font-size: 3em;
-    }
+        font-size: 3em;}
 }
 
 h1 > em {	
     color: var(--color-lime-500);
-    font-style: normal;
-}
+    font-style: normal;}
 
 a {
-    color: var(--color-lime-500);		
-}
+  color: var(--color-purple-500);}
 a:hover {
-    color: var(--color-lime-700);
+  color: var(--color-purple-700);}
+body#index a {
+    color: var(--color-lime-500);}
+body#index a:hover {
+    color: var(--color-lime-700);}
+    
+hr {
+  margin: 5rem auto 2rem;
 }
 
 /** Container **/
 .wrapper {		
-    max-width: var(--bp-max);
-    margin: 0 auto;
+    width: 90%;
+    margin: 3rem auto 5rem;
 }
 
 .flex-container {
