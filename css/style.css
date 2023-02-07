@@ -18,7 +18,7 @@ body {
     color: var(--color-text-base);
     font: 300 16px/1.25 Poppins, Helvetica, Arial, sans-serif;}
 body#index {
-    background-image: url("../assets/bg-calm_sea.svg");		
+    background-image: url("../assets/bg-calm_sea-side.svg");		
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
