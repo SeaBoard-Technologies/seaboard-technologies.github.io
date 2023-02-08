@@ -1,0 +1,10 @@
+<svg width="1600" height="1600" viewBox="0 0 1600 1600" fill="none" xmlns="http://www.w3.org/2000/svg">	
+	<rect width="1600" height="1600" fill="#FFF"/>
+	<path d="M 1200 0 H 2000 V 3200 H 1200 C 1280 3080 1400 3000 1200 2520 C 1040 2160 1040 1840 1200 1600 C 1280 1480 1400 1400 1200 920 C 1040 560 1040 240 1200 0 Z" fill="url(#bg_arctic)"/>
+	<defs>
+		<linearGradient id="bg_arctic" x1="0" y1=".5" x2=".75" y2=".5">
+			<stop offset="0" stop-color="#EEE"/>
+			<stop offset="1" stop-color="#FFF"/>
+		</linearGradient>
+	</defs>
+</svg>
