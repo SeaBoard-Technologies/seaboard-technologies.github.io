@@ -1,34 +1,424 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-GB">
-    <head>
-        <!-- Google tag (gtag.js) -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-W2JJRCJM1E"></script>
-            <script>
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
+ <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SeaBoard Technologies</title>
+	<meta name="description" content="Maritime Open Banking. Banking made easy on sea & shore. SeaBoard is an end-to-end crew wage platform that powers secure payments to seafarers and dependants across the globe.">
+	<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+	<meta property="og:title" content="Seaboard Technologies. Banking made easy on sea & shore">
+	<meta property="og:image" content="https://seaboard.sg/images/seaboard-og.jpg">
+	<meta property="og:description" content="Banking made easy on sea & shore. SeaBoard is an end-to-end crew wage platform that powers secure payments to seafarers and dependants across the globe. Fast, Contactless Payments at a glance.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://seaboard.sg/">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@100;200;300;400;700&display=swap">
+	<link rel="stylesheet" href="/_astro/index.efc5516a.css">
+</head>
 
-              gtag('config', 'G-W2JJRCJM1E');
-            </script>
-        <!-- Google tag end -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
-        <link rel="stylesheet" href="/css/style.css">
-        <title>SeaBoard Technologies</title>
-        <meta name="description" content="Building a Digital Maritime Ecosystem">
-        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-    </head>
-    <body id="index">
-        <div class="wrapper">
-            <div class="flex-container">
-                <div>
-                    <img class="logo" src="assets/logo.svg" alt="SeaBoard logo">
-                    <h1 id="mob">Maritime <em>Open</em> Banking</h1>
-                    <p>Say <a href="mailto:hello@seaboard.sg">hello@seaboard.sg</a> or view our <a href="./openings/index.html">career openings</a>.</p>
-                </div>
-            </div>
-        </div>
-    </body>
+<body>
+	<main>
+		<style>
+			astro-island,
+			astro-slot,
+			astro-static-slot {
+				display: contents
+			}
+		</style>
+		<script>
+			(() => {
+				var e = async t => {
+					await (await t())()
+				};
+				(self.Astro || (self.Astro = {})).load = e;
+				window.dispatchEvent(new Event("astro:load"));
+			})();;
+			(() => {
+				var b = Object.defineProperty;
+				var f = (c, o, i) => o in c ? b(c, o, {
+					enumerable: !0,
+					configurable: !0,
+					writable: !0,
+					value: i
+				}) : c[o] = i;
+				var l = (c, o, i) => (f(c, typeof o != "symbol" ? o + "" : o, i), i);
+				var p;
+				{
+					let c = {
+							0: t => m(t),
+							1: t => i(t),
+							2: t => new RegExp(t),
+							3: t => new Date(t),
+							4: t => new Map(i(t)),
+							5: t => new Set(i(t)),
+							6: t => BigInt(t),
+							7: t => new URL(t),
+							8: t => new Uint8Array(t),
+							9: t => new Uint16Array(t),
+							10: t => new Uint32Array(t)
+						},
+						o = t => {
+							let [e, r] = t;
+							return e in c ? c[e](r) : void 0
+						},
+						i = t => t.map(o),
+						m = t => typeof t != "object" || t === null ? t : Object.fromEntries(Object.entries(t).map(([e, r]) => [e, o(r)]));
+					customElements.get("astro-island") || customElements.define("astro-island", (p = class extends HTMLElement {
+						constructor() {
+							super(...arguments);
+							l(this, "Component");
+							l(this, "hydrator");
+							l(this, "hydrate", async () => {
+								var d;
+								if (!this.hydrator || !this.isConnected) return;
+								let e = (d = this.parentElement) == null ? void 0 : d.closest("astro-island[ssr]");
+								if (e) {
+									e.addEventListener("astro:hydrate", this.hydrate, {
+										once: !0
+									});
+									return
+								}
+								let r = this.querySelectorAll("astro-slot"),
+									a = {},
+									h = this.querySelectorAll("template[data-astro-template]");
+								for (let n of h) {
+									let s = n.closest(this.tagName);
+									s != null && s.isSameNode(this) && (a[n.getAttribute("data-astro-template") || "default"] = n.innerHTML, n.remove())
+								}
+								for (let n of r) {
+									let s = n.closest(this.tagName);
+									s != null && s.isSameNode(this) && (a[n.getAttribute("name") || "default"] = n.innerHTML)
+								}
+								let u;
+								try {
+									u = this.hasAttribute("props") ? m(JSON.parse(this.getAttribute("props"))) : {}
+								} catch (n) {
+									let s = this.getAttribute("component-url") || "<unknown>",
+										y = this.getAttribute("component-export");
+									throw y && (s += ` (export ${y})`), console.error(`[hydrate] Error parsing props for component ${s}`, this.getAttribute("props"), n), n
+								}
+								await this.hydrator(this)(this.Component, u, a, {
+									client: this.getAttribute("client")
+								}), this.removeAttribute("ssr"), this.dispatchEvent(new CustomEvent("astro:hydrate"))
+							});
+							l(this, "unmount", () => {
+								this.isConnected || this.dispatchEvent(new CustomEvent("astro:unmount"))
+							})
+						}
+						disconnectedCallback() {
+							document.removeEventListener("astro:after-swap", this.unmount), document.addEventListener("astro:after-swap", this.unmount, {
+								once: !0
+							})
+						}
+						connectedCallback() {
+							if (!this.hasAttribute("await-children") || document.readyState === "interactive" || document.readyState === "complete") this.childrenConnectedCallback();
+							else {
+								let e = () => {
+										document.removeEventListener("DOMContentLoaded", e), r.disconnect(), this.childrenConnectedCallback()
+									},
+									r = new MutationObserver(() => {
+										var a;
+										((a = this.lastChild) == null ? void 0 : a.nodeType) === Node.COMMENT_NODE && this.lastChild.nodeValue === "astro:end" && (this.lastChild.remove(), e())
+									});
+								r.observe(this, {
+									childList: !0
+								}), document.addEventListener("DOMContentLoaded", e)
+							}
+						}
+						async childrenConnectedCallback() {
+							let e = this.getAttribute("before-hydration-url");
+							e && await import(e), this.start()
+						}
+						start() {
+							let e = JSON.parse(this.getAttribute("opts")),
+								r = this.getAttribute("client");
+							if (Astro[r] === void 0) {
+								window.addEventListener(`astro:${r}`, () => this.start(), {
+									once: !0
+								});
+								return
+							}
+							Astro[r](async () => {
+								let a = this.getAttribute("renderer-url"),
+									[h, {
+										default: u
+									}] = await Promise.all([import(this.getAttribute("component-url")), a ? import(a) : () => () => {}]),
+									d = this.getAttribute("component-export") || "default";
+								if (!d.includes(".")) this.Component = h[d];
+								else {
+									this.Component = h;
+									for (let n of d.split(".")) this.Component = this.Component[n]
+								}
+								return this.hydrator = u, this.hydrate
+							}, e, this)
+						}
+						attributeChangedCallback() {
+							this.hydrate()
+						}
+					}, l(p, "observedAttributes", ["props"]), p))
+				}
+			})();
+		</script><astro-island uid="Z1NJxd6" component-url="/_astro/NavBar.27af75f6.js" component-export="default" renderer-url="/_astro/client.3949e32e.js" props="{}" ssr="" client="load" opts="{&quot;name&quot;:&quot;NavBar&quot;,&quot;value&quot;:true}" await-children="">
+			<nav class="fixed top-0 w-full z-50 font-poppins">
+				<div class="flex py-4 justify-between mx-auto max-w-lg md:max-w-7xl"><img src="/images/Logo.svg" alt="logo" class="cursor-pointer h-[7] lg:h-8 px-6 my-auto hover:scale-105 transition duration-500">
+					<div class="my-auto d-flex px-6"><a href="#" class="text-white md:text-sm text-left hover:underline transition duration-500">FAQs</a><button class="text-xs ml-5 bg-yellow rounded-full py-2 px-4 font-normal tracking-normal hover:scale-105 transition duration-500"> CONNECT </button></div>
+				</div>
+			</nav><!--astro:end-->
+		</astro-island>
+		<div class="bg-blue h-screen overflow-clip">
+			<div class="absolute right-0 bottom-0 h-screen">
+				<div class="h-full flex flex-column items-end lg:hidden align-bottom"><img src="/images/hero-bg-2.svg" alt="hero background"></div><img src="/images/hero-bg-small-width.svg" alt="hero background" class="h-full hidden lg:flex xl:hidden"><img src="/images/hero-bg.svg" alt="hero background" class="h-screen hidden xl:flex object-cover">
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-11 items-center h-full max-w-lg md:max-w-7xl mx-auto">
+				<div class="max-w-lg mx-auto px-6 md:ms-0 text-white font-poppins col-span-5 z-20 mt-36 md:mt-0">
+					<p class="text-2xl sm:text-3xl lg:text-5xl leading-60 mb-5 tracking-tighter"> Banking made easy on sea &amp; shore </p>
+					<p class="mb-5 text-xs sm:text-sm lg:text-base font-thin font-poppins opacity-70"> SeaBoard is an end-to-end crew wage platform that powers secure payments to seafarers and dependants across the globe. </p>
+					<div class="hover:opacity-100 opacity-70 transition duration-500"><a href="#" class="underline text-base tracking-normal font-extralight">EXPLORE MORE</a></div>
+				</div>
+				<div class="flex justify-center max-h-screen col-span-5 h-full md:pt-24 xl:pt-32 px-8 sm:px-32 md:px-12"><img src="/images/dock-worker.png" alt="girl" class="z-20 object-contain object-bottom"></div>
+			</div>
+		</div>
+		<div class="bg-white mx-auto font-poppins py-24 md:py-4 px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-8 xl:gap-12 items-center mx-auto py-14 sm:max-w-xl lg:max-w-6xl min-h-screen">
+				<div class="col-span-3 mt-9 md:mt-0 md:px-6 lg:px-7"><img src="/images/Discover-8.png" alt="card" class="md:w-42 md:order-1 order-2 mt-5 mb-3 w-21 hover:scale-[1.02] transition duration-500">
+					<p class="md:text-2xl xl:text-3xl text-xl md:order-2 order-1 leading-60 text-left font-extralight mb-12 lg:mb-0"> Fast, Contactless Payments at a glance. </p>
+				</div>
+				<div class="lg:col-span-5">
+					<ul class="md:px-6"><!--[-->
+						<li class="py-2 hover:scale-[0.98] transition duration-500">
+							<div class="">
+								<p class="text-lg lg:text-xl font-extralight">Currency Conversion</p>
+								<p class="mt-1 text-sm lg:text-md leading-5 font-thin opacity-70">Easily convert your dollars into any currency you need, ensuring you get the best rates available.</p>
+							</div>
+							<div class="flex gap-1 mt-5 align-middle lg:col-span-3">
+								<div class="flex-grow align-middle bg-black/20 h-[1px] my-auto"></div>
+								<div class="h-[4px] w-[4px] bg-blue rounded-full"></div>
+								<div class="flex-grow align-middle bg-black/20 h-[1px] my-auto"></div>
+							</div>
+						</li>
+						<li class="py-2 hover:scale-[0.98] transition duration-500">
+							<div class="">
+								<p class="text-lg lg:text-xl font-extralight">Global Spending</p>
+								<p class="mt-1 text-sm lg:text-md leading-5 font-thin opacity-70">With our Seaboard Card, you can make purchases worldwide, giving you the ultimate financial flexibility.</p>
+							</div>
+							<div class="flex gap-1 mt-5 align-middle lg:col-span-3">
+								<div class="flex-grow align-middle bg-black/20 h-[1px] my-auto"></div>
+								<div class="h-[4px] w-[4px] bg-blue rounded-full"></div>
+								<div class="flex-grow align-middle bg-black/20 h-[1px] my-auto"></div>
+							</div>
+						</li>
+						<li class="py-2 hover:scale-[0.98] transition duration-500">
+							<div class="">
+								<p class="text-lg lg:text-xl font-extralight">User-Friendly App</p>
+								<p class="mt-1 text-sm lg:text-md leading-5 font-thin opacity-70">Manage your funds and track your spending on our intuitive mobile app. Stay in control of your finances, no matter where you are.</p>
+							</div>
+							<div class="flex gap-1 mt-5 align-middle lg:col-span-3">
+								<div class="flex-grow align-middle bg-black/20 h-[1px] my-auto"></div>
+								<div class="h-[4px] w-[4px] bg-blue rounded-full"></div>
+								<div class="flex-grow align-middle bg-black/20 h-[1px] my-auto"></div>
+							</div>
+						</li><!--]-->
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="bg-secondary py-12 px-4 sm:px-8 font-poppins">
+			<div class="items-center lg:grid lg:grid-cols-9 h-full mx-auto max-w-lg md:max-w-xl lg:max-w-7xl">
+				<div class="col-span-3 md:px-0 px-6 mt-12 -mb-12 lg:mt-0">
+					<p class="md:text-lg text-sm tracking-wider opacity-85 leading-22 text-left font-extralight"> WHY CHOOSE US ? </p>
+					<p class="tracking-normal text-left font-extralight text-41 mt-4 leading-tight"> Trusted Financial Companion </p>
+				</div>
+				<div class="lg:col-span-6 h-full w-full justify-items-center lg:grid px-6 md:px-0 lg:px-12">
+					<ul role="list" class="mt-20 grid grid-cols-1 gap-4 sm:grid-cols-2 justify-start w-full mx-auto"><!--[-->
+						<li class="px-4 py-5 bg-white hover:shadow-lg hover:scale-[1.01] transition duration-500"><img src="/images/global-acceptance.jpg" alt="frames" class="w-full">
+							<div>
+								<p class="text-base lg:text-lg leading-6 font-[200] mt-4">Global Acceptance</p>
+								<p class="mt-1 text-sm lg:text-sm leading-5 font-thin opacity-90 mb-2">Our Seaboard Card is accepted world wide, ensuring you never run out of spending options at anywhere.</p>
+							</div>
+						</li>
+						<li class="px-4 py-5 bg-white hover:shadow-lg hover:scale-[1.01] transition duration-500"><img src="/images/rates.jpg" alt="frames" class="w-full">
+							<div>
+								<p class="text-base lg:text-lg leading-6 font-[200] mt-4"> Competitive Rates</p>
+								<p class="mt-1 text-sm lg:text-sm leading-5 font-thin opacity-90 mb-2">We offer some of the most competitive exchange rates in the market, helping you save on currency conversion.</p>
+							</div>
+						</li>
+						<li class="px-4 py-5 bg-white hover:shadow-lg hover:scale-[1.01] transition duration-500"><img src="/images/Transparent.jpg" alt="frames" class="w-full">
+							<div>
+								<p class="text-base lg:text-lg leading-6 font-[200] mt-4"> Transparent</p>
+								<p class="mt-1 text-sm lg:text-sm leading-5 font-thin opacity-90 mb-2">We believe in complete transparency. No hidden fees, no confusing terms. With Seaboard, you get what you see.</p>
+							</div>
+						</li>
+						<li class="px-4 py-5 bg-white hover:shadow-lg hover:scale-[1.01] transition duration-500"><img src="/images/sailor-friendly.jpg" alt="frames" class="w-full">
+							<div>
+								<p class="text-base lg:text-lg leading-6 font-[200] mt-4">Sailor-Friendly</p>
+								<p class="mt-1 text-sm lg:text-sm leading-5 font-thin opacity-90 mb-2">We understand the unique needs of sailors and travellers.Seaboard is tailor-made to meet the requirements of those constantly on the move.</p>
+							</div>
+						</li><!--]-->
+					</ul>
+				</div>
+				<div class="md:mt-24"></div>
+			</div>
+		</div>
+		<div class="bg-white">
+			<div class="flex items-center lg:grid lg:grid-cols-6 min-h-full">
+				<div class="col-span-2 h-full lg:flex items-end hidden"><img src="images/bg-curves.svg" alt="Background Curves" class="object-contain"></div>
+				<div class="lg:col-span-3 h-full w-full flex justify-items-center lg:grid items-center py-24">
+					<div class="w-full mx-auto"><!--[-->
+						<div class="xl:grid xl:grid-cols-3 py-4 px-8 max-w-lg xl:max-w-5xl mx-auto hover:scale-[0.98] transition duration-500">
+							<div class="text-lg lg:text-xl font-extralight my-auto">Real-Time Rates</div>
+							<div class="col-span-2 opacity-70 font-thin text-sm lg:text-base">We provide you with up-to-the-minute exchange rates to ensure you always get the best deal.</div>
+							<div class="flex gap-1 mt-8 align-middle lg:col-span-3">
+								<div class="flex-grow align-middle bg-black/20 h-[1px] my-auto"></div>
+								<div class="h-[4px] w-[4px] bg-blue rounded-full"></div>
+								<div class="flex-grow align-middle bg-black/20 h-[1px] my-auto"></div>
+							</div>
+						</div>
+						<div class="xl:grid xl:grid-cols-3 py-4 px-8 max-w-lg xl:max-w-5xl mx-auto hover:scale-[0.98] transition duration-500">
+							<div class="text-lg lg:text-xl font-extralight my-auto">Seaboard Card</div>
+							<div class="col-span-2 opacity-70 font-thin text-sm lg:text-base">Enjoy the convenience of our Seaboard Card, your passport to global spending, accepted at millions of locations.</div>
+							<div class="flex gap-1 mt-8 align-middle lg:col-span-3">
+								<div class="flex-grow align-middle bg-black/20 h-[1px] my-auto"></div>
+								<div class="h-[4px] w-[4px] bg-blue rounded-full"></div>
+								<div class="flex-grow align-middle bg-black/20 h-[1px] my-auto"></div>
+							</div>
+						</div>
+						<div class="xl:grid xl:grid-cols-3 py-4 px-8 max-w-lg xl:max-w-5xl mx-auto hover:scale-[0.98] transition duration-500">
+							<div class="text-lg lg:text-xl font-extralight my-auto">Multi-Currency Wallet</div>
+							<div class="col-span-2 opacity-70 font-thin text-sm lg:text-base">Store multiple currencies in one account, making it easier to manage your finances during your travels.</div>
+							<div class="flex gap-1 mt-8 align-middle lg:col-span-3">
+								<div class="flex-grow align-middle bg-black/20 h-[1px] my-auto"></div>
+								<div class="h-[4px] w-[4px] bg-blue rounded-full"></div>
+								<div class="flex-grow align-middle bg-black/20 h-[1px] my-auto"></div>
+							</div>
+						</div>
+						<div class="xl:grid xl:grid-cols-3 py-4 px-8 max-w-lg xl:max-w-5xl mx-auto hover:scale-[0.98] transition duration-500">
+							<div class="text-lg lg:text-xl font-extralight my-auto">Secure and Reliable</div>
+							<div class="col-span-2 opacity-70 font-thin text-sm lg:text-base">Your financial security is our top priority. We use state-of-the-art encryption to keep your funds and data safe.</div>
+							<div class="flex gap-1 mt-8 align-middle lg:col-span-3">
+								<div class="flex-grow align-middle bg-black/20 h-[1px] my-auto"></div>
+								<div class="h-[4px] w-[4px] bg-blue rounded-full"></div>
+								<div class="flex-grow align-middle bg-black/20 h-[1px] my-auto"></div>
+							</div>
+						</div>
+						<div class="xl:grid xl:grid-cols-3 py-4 px-8 max-w-lg xl:max-w-5xl mx-auto hover:scale-[0.98] transition duration-500">
+							<div class="text-lg lg:text-xl font-extralight my-auto">24/7 Customer Support</div>
+							<div class="col-span-2 opacity-70 font-thin text-sm lg:text-base">Our dedicated support team is always available to assist you with any queries or concerns</div>
+							<div class="flex gap-1 mt-8 align-middle lg:col-span-3">
+								<div class="flex-grow align-middle bg-black/20 h-[1px] my-auto"></div>
+								<div class="h-[4px] w-[4px] bg-blue rounded-full"></div>
+								<div class="flex-grow align-middle bg-black/20 h-[1px] my-auto"></div>
+							</div>
+						</div><!--]-->
+					</div>
+				</div>
+			</div>
+		</div><astro-island uid="rHB8h" component-url="/_astro/StepsSection.17b5e65b.js" component-export="default" renderer-url="/_astro/client.3949e32e.js" props="{}" ssr="" client="load" opts="{&quot;name&quot;:&quot;StepsSection&quot;,&quot;value&quot;:true}" await-children="">
+			<div class="bg-secondary min-h-screen flex align-middle py-24">
+				<div class="grid grid-cols-1 xl:grid-cols-2 mx-auto md:max-w-7xl">
+					<div class="px-12 py-20 hover:scale-[0.98] transition duration-500"><img src="/images/Group-31.png" alt="card-details"></div>
+					<div class="md:px-12 md:py-20 px-6">
+						<div class="font-poppins md:text-lg text-sm tracking-wider opacity-85 leading-22 text-left font-thin"> HOW TO ENROL </div>
+						<p class="font-poppins tracking-tighter text-left md:text-[44px] text-[26px] opacity-80 leading-tight my-2 font-extralight"> 5 Quick steps to use Seaboard Card </p>
+						<div>
+							<ul role="list"><!--[-->
+								<li class="md:border-b border-b-2 py-2">
+									<div class="py-2 hover:scale-[0.98] transition duration-500">
+										<div class="flex justify-between">
+											<div class="flex">
+												<div class="tracking-normal font-thin md:text-2xl text-xl opacity-30">01</div>
+												<div class="md:text-xl text-lg font-extralight tracking-normal leading-22 ml-3">Download the app to Sign Up <div class="md:text-base text-sm mt-1 opacity-70 font-thin">Download our app from your device&#39;s app store.</div>
+												</div>
+											</div>
+											<div class="cursor-pointer"><img src="/images/arrow_up.svg" alt="arrow_down"></div>
+										</div>
+									</div>
+								</li>
+								<li class="md:border-b border-b-2 py-2">
+									<div class="py-2 hover:scale-[0.98] transition duration-500">
+										<div class="flex justify-between">
+											<div class="flex">
+												<div class="tracking-normal font-thin md:text-2xl text-xl opacity-30">02</div>
+												<div class="md:text-xl text-lg font-extralight tracking-normal leading-22 ml-3">Registration for Free <!----></div>
+											</div>
+											<div class="cursor-pointer"><img src="/images/arrow_down.svg" alt="arrow_down"></div>
+										</div>
+									</div>
+								</li>
+								<li class="md:border-b border-b-2 py-2">
+									<div class="py-2 hover:scale-[0.98] transition duration-500">
+										<div class="flex justify-between">
+											<div class="flex">
+												<div class="tracking-normal font-thin md:text-2xl text-xl opacity-30">03</div>
+												<div class="md:text-xl text-lg font-extralight tracking-normal leading-22 ml-3">Verify your identity <!----></div>
+											</div>
+											<div class="cursor-pointer"><img src="/images/arrow_down.svg" alt="arrow_down"></div>
+										</div>
+									</div>
+								</li>
+								<li class="md:border-b border-b-2 py-2">
+									<div class="py-2 hover:scale-[0.98] transition duration-500">
+										<div class="flex justify-between">
+											<div class="flex">
+												<div class="tracking-normal font-thin md:text-2xl text-xl opacity-30">04</div>
+												<div class="md:text-xl text-lg font-extralight tracking-normal leading-22 ml-3">Load Funds to the Card <!----></div>
+											</div>
+											<div class="cursor-pointer"><img src="/images/arrow_down.svg" alt="arrow_down"></div>
+										</div>
+									</div>
+								</li>
+								<li class="md:border-b border-b-2 py-2">
+									<div class="py-2 hover:scale-[0.98] transition duration-500">
+										<div class="flex justify-between">
+											<div class="flex">
+												<div class="tracking-normal font-thin md:text-2xl text-xl opacity-30">05</div>
+												<div class="md:text-xl text-lg font-extralight tracking-normal leading-22 ml-3">Start Transacting around the Globe <!----></div>
+											</div>
+											<div class="cursor-pointer"><img src="/images/arrow_down.svg" alt="arrow_down"></div>
+										</div>
+									</div>
+								</li><!--]-->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div><!--astro:end-->
+		</astro-island>
+		<div class="bg-white py-16 overflow-hidden">
+			<div class="items-center lg:grid xl:grid-cols-2 min-h-full md:px-0 px-4 mx-auto md:max-w-7xl">
+				<div class="h-full w-full mx-0 md:mx-4 lg:px-0"><img src="/images/footer-logo.svg" alt="footer-logo">
+					<div class="font-poppins font-thin tracking-normal md:text-base text-sm opacity-50 ml-4 max-w-lg"> End-to-end crew wage platform that powers secure payments to seafarers and dependants across the globe. </div>
+					<div class="flex mt-4 ml-2"><img src="/images/apple.jpg" alt="apple" class="mr-3 hover:scale-[1.02] transition duration-500"><img src="/images/google.jpg" alt="google" class="hover:scale-[1.02] transition duration-500"></div>
+				</div>
+				<div class="md:px-8 px-4">
+					<div class="lg:grid grid-cols-3">
+						<div class="mt-16 lg:mt-8">
+							<div class="font-poppins tracking-normal text-sm font-bold text-black opacity-50"> COMPANY </div>
+							<div class="font-poppins font-light md:text-base py-2 flex flex-col gap-1">
+								<div>Home</div>
+								<div>FAQs</div>
+								<div>Careers</div>
+							</div>
+						</div>
+						<div class="mt-16 lg:mt-8">
+							<div class="font-poppins tracking-normal text-sm font-bold text-black opacity-50"> CONTACT </div>
+							<div class="font-poppins font-light md:text-base py-2 flex flex-col gap-1">
+								<div>Contact Us</div>
+								<div>Contact Support</div>
+							</div>
+						</div>
+						<div class="mt-16 lg:mt-8">
+							<div class="font-poppins tracking-normal text-sm font-bold text-black opacity-50"> LEGAL </div>
+							<div class="font-poppins font-light md:text-base py-2 flex flex-col gap-1">
+								<div>Terms and Conditions</div>
+								<div>Privacy Policies</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+
 </html>
