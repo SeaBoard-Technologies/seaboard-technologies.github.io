@@ -1,0 +1,11 @@
+<svg width="512" height="512" viewBox="90 96 512 512" xmlns="http://www.w3.org/2000/svg">
+	<circle cx="256" cy="256" r="50" fill="#EF0"/>
+	<path d="M 200,224 h -16 a 24,32 0 0 1 0,-64 h 172 v 8 c 2,4 12,8 16,0 l 48,-64 c 4,-4 0,-8 -8,-8 h -220 a 96,96 0 0 0 0,192 h 8 a 128,96 0 0 1 0,-64" fill="url(#logo_deep_sea)"/>
+	<path d="M 312,288 h 16 a 24,32 0 0 1 0,64 h -172 v -8 c -2,-4 -12,-8 -16,0 l -48,64 c -4,4 0,8 8,8 h 220 a -96,-96 0 0 0 0,-192 h -8 a -128,-96 0 0 1 0,64" fill="url(#logo_deep_sea)"/>
+	<defs>
+		<linearGradient id="logo_deep_sea" x1="0" y1="100%" x2="100%" y2="50%">
+			<stop offset="0" stop-color="#319"/>
+			<stop offset="1" stop-color="#53F"/>
+		</linearGradient>
+	</defs>
+</svg>
