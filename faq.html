@@ -59,3 +59,96 @@
         </main>
     </body>
 </html>
+
+
+<div class="faq-drawer-group">
+              <div class="faq-drawer">
+                <input class="faq-drawer__trigger" id="faq-drawer-1" type="checkbox" />
+                <label class="faq-drawer__title" for="faq-drawer-1">Will there be reward points for card spending?</label>
+                <div class="faq-drawer__content-wrapper">
+                  <div class="faq-drawer__content">
+                    <p>Reward points on card spending is currently not available. However, we are working on it and may be available in the near future.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="faq-drawer">
+                <input class="faq-drawer__trigger" id="faq-drawer-2" type="checkbox" />
+                <label class="faq-drawer__title" for="faq-drawer-2">Will I be charged for transferring/remitting money from my Seaboard account to my bank savings account?
+
+                </label>
+                <div class="faq-drawer__content-wrapper">
+                  <div class="faq-drawer__content">
+                    <p>Reward points on card spending is currently not available. However, we are working on it and may be available in the near future.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+<style>
+.faq-drawer-group > div:last-child {
+  border-bottom: #ccd 1px solid;
+}
+
+
+.faq-drawer__content-wrapper {
+  border-left: #ccd 1px solid;
+  border-right: #ccd 1px solid;
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.25s ease-in-out;
+  padding: 0 1em;
+}
+
+.faq-drawer__title {
+  font-weight: 400;
+  color: var(--color-text-base);
+  border-left: #ccd 1px solid;
+  border-top: #ccd 1px solid;
+  border-right: #ccd 1px solid;
+  cursor: pointer;
+  display: block;
+  padding: 1em;
+  position: relative;
+  margin-bottom: 0;
+  transition: all 0.25s ease-out;
+}
+
+.faq-drawer__title::after {
+  border-style: solid;
+  border-width: 2px 2px 0 0;
+  border-color: #99b;
+  content: " ";
+  display: inline-block;
+  float: right;
+  width: 6px;
+  height: 6px;
+  left: 2px;
+  position: relative;
+  right: 20px;
+  top: 2px;
+  transform: rotate(135deg);
+  transition: 0.35s ease-in-out;
+  vertical-align: top;
+}
+
+/* OPTIONAL HOVER STATE */
+.faq-drawer__title:hover {
+  background-color: #f3f2f7;
+}
+
+.faq-drawer__trigger:checked
+  + .faq-drawer__title
+  + .faq-drawer__content-wrapper {
+  max-height: 350px;
+}
+
+.faq-drawer__trigger:checked + .faq-drawer__title::after {
+  transform: rotate(-45deg);
+  transition: 0.25s ease-in-out;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+</style>
