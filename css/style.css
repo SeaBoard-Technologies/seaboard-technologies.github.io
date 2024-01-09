@@ -109,63 +109,69 @@ footer hr {
 	border-top: 1px solid #eee;}
 
 /** Accordion **/
-.accordion  {
-	margin-top: 10px;
-	background-color: #fff;
-	border-bottom: 1px solid #ddd;
-	margin-bottom: 2em;
+.faq-drawer-group > div:last-child {
+  border-bottom: #ccd 1px solid;
+  margin-bottom: 2em;
 }
 
-.accordion-title {
-	border-top: 1px solid #ddd;
-	border-left: 1px solid #ddd;
-	border-right: 1px solid #ddd;
-	padding: 1em 1.5em 1em 1em;
-	font-weight: 400;
-	cursor: pointer;
-	position: relative;
-	margin: 0;
+
+.faq-drawer__content-wrapper {
+  border-left: #ccd 1px solid;
+  border-right: #ccd 1px solid;
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.25s ease-in-out;
+  padding: 0 1em;
 }
 
-.accordion-title:hover  {
-	background-color: #f3f2f7;
-	transition: 0.3s;
+.faq-drawer__title {
+  font-weight: 400;
+  color: var(--color-text-base);
+  border-left: #ccd 1px solid;
+  border-top: #ccd 1px solid;
+  border-right: #ccd 1px solid;
+  cursor: pointer;
+  display: block;
+  padding: 1em;
+  position: relative;
+  margin-bottom: 0;
+  transition: all 0.25s ease-out;
 }
 
-.accordion-title.is-open {
-	background-color: #f3f2f7;
+.faq-drawer__title::after {
+  border-style: solid;
+  border-width: 2px 2px 0 0;
+  border-color: #99b;
+  content: " ";
+  display: inline-block;
+  float: right;
+  width: 6px;
+  height: 6px;
+  left: 2px;
+  position: relative;
+  right: 20px;
+  top: 2px;
+  transform: rotate(135deg);
+  transition: 0.35s ease-in-out;
+  vertical-align: top;
 }
 
-.accordion-title::after{
-	content: "";
-	position: absolute;
-	right: 25px;
-	top: 50%;
-	transition: all 0.3s ease-in-out;
-	display: block;
-	width: 6px;
-	height: 6px;
-	border-top: solid 2px #99b;
-	border-right: solid 2px #99b;
-	transform: translateY(-50%) rotate(135deg);
+/* OPTIONAL HOVER STATE */
+.faq-drawer__title:hover {
+  background-color: #f3f2f7;
 }
 
-.accordion-content {
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height .3s ease-in-out;
-	border-left: 1px solid #ddd;
-	border-right: 1px solid #ddd;
+.faq-drawer__trigger:checked
+  + .faq-drawer__title
+  + .faq-drawer__content-wrapper {
+  max-height: 350px;
 }
 
-.accordion-content p {
-	padding: 0 1em 0 1em;
+.faq-drawer__trigger:checked + .faq-drawer__title::after {
+  transform: rotate(-45deg);
+  transition: 0.25s ease-in-out;
 }
 
-.accordion-item.is-open .accordion-content  {
-	max-height: 100em;
-}
-
-.accordion-item.is-open .accordion-title::after  {
-	transform: translateY(-50%) rotate(315deg);
+input[type="checkbox"] {
+  display: none;
 }
