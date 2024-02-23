@@ -18,30 +18,22 @@ body, button {
 }
 
 /** Typography **/
-h1 {
+h1, h2 {
     font-size: 3rem;
-    line-height:3.5rem;
+    line-height: 3.5rem;
     font-weight: 700;
     letter-spacing: -1px;
 }
-
-h2 {
-    font-size: 3rem;
-    line-height: 3.75rem;
-    font-weight: 700;
-    letter-spacing: -1px;
-}
-
+h3, h4 {
+	font-weight: 700;}
 h3 {
     font-size: 1.625rem;
     line-height: 1.875rem;
-    font-weight: 700;
 }
 
 h4 {
     font-size: 1.25rem;
     line-height: 1.5rem;
-    font-weight: 700;
 }
 
 p {
@@ -60,7 +52,6 @@ a {
 a:hover {
     color: var(--color-text-bright);
     opacity: 0.9;
-    text-decoration: underline;
 }
 
 .highlight {
@@ -69,8 +60,6 @@ a:hover {
 
 .text-uppercase {
     text-transform: uppercase;
-    font-weight: 800;
-    font-size: 1rem;
 }
 
 .footnote {
@@ -129,21 +118,25 @@ a:hover {
 
 /** Rows **/
 #hero {
-    border-bottom-left-radius: 3rem;
-    border-bottom-right-radius: 3rem;
+	 border-bottom-left-radius: 3rem;
+	 border-bottom-right-radius: 3rem;
+}
+#hero #download {
+	gap: 2rem;}
+#hero #download > div {
+	width: 10rem;}
+#hero #download .small {
+	display: block;
+	padding-top: .5rem;
+	text-align: center;
+	}
+	
+@media (max-width: 24rem) {
+		#hero #download {
+			flex-wrap: wrap;}
 }
 
-#why-choose-us {
-    border-top-left-radius: 3rem;
-    border-top-right-radius: 3rem;
-}
-
-#benefits {
-    border-bottom-left-radius: 3rem;
-    border-bottom-right-radius: 3rem;
-}
-
-#sign-up {
+#why-choose-us, #benefits, #sign-up {
     border-top-left-radius: 3rem;
     border-top-right-radius: 3rem;
 }
