@@ -73,6 +73,10 @@ body#index a.button {
 body#index a.button:hover {
    background-color: var(--color-lime-700);}
 
+#tncs-id {
+	font-size: 0.75rem;
+    	padding-top: 1rem;
+}
 		
 hr {
 	margin: 5rem auto 2rem;
