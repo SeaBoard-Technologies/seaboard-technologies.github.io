@@ -1,2 +1,3 @@
 # seaboard-technologies.github.io
-SeaBoard corporate website
+
+SeaBoard corporate website served via AWS Amplify.
